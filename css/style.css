@@ -275,6 +275,7 @@ h1 {
     top: 481px;
     left: -496px;
     border-radius: 100%;
+    z-index: -1;
 }
 .circle2 {
     filter: blur(305.61px);
@@ -332,6 +333,7 @@ h1 {
         top: 381px;
         left: -396px;
         border-radius: 100%;
+        z-index: -1;
     }
 }
 @media (max-width: 900px) and (min-width:769px) {
@@ -344,6 +346,7 @@ h1 {
         top: 381px;
         left: -296px;
         border-radius: 100%;
+        z-index: -1;
     }
     .circle2 {
         filter: blur(205.61px);
@@ -423,6 +426,7 @@ h1 {
     z-index: -1;
     bottom: -30px;
     border-radius: 100%;
+    z-index: -1;
 }
 .muz-track__header {
     display: flex;
@@ -586,6 +590,7 @@ h1 {
         z-index: -1;
         bottom: -30px;
         border-radius: 100%;
+        z-index: -1;
     }
 }
 @media (max-width: 900px) and (min-width:769px) {
@@ -599,6 +604,7 @@ h1 {
         z-index: -1;
         bottom: 0px;
         border-radius: 100%;
+        z-index: -1;
     }
 }
 @media (max-width: 768px) {
@@ -674,6 +680,7 @@ h1 {
         top: 150px;
         bottom: auto;
         border-radius: 100%;
+        z-index: -1;
     }
     .muz-track__main__item {
         max-width: 100%;
@@ -694,9 +701,10 @@ h1 {
     position: absolute;
     width: 393px;
     height: 393px;
-    left: 427px;
+    left: 627px;
     top: 383px;
     border-radius: 100%;
+    z-index: -1;
 }
 .agency__wrap {
     display: flex;
@@ -770,6 +778,19 @@ h1 {
     font-weight: 900;
     font-size: 21px;
     color: #fb4bff;
+}
+@media (max-width:1440px) {
+    .agency__circle {
+        filter: blur(215.03px);
+        background: rgba(255, 83, 217, 0.6);
+        position: absolute;
+        width: 393px;
+        height: 393px;
+        left: 427px;
+        top: 383px;
+        border-radius: 100%;
+        z-index: -1;
+    }
 }
 @media (max-width: 1280px) and (min-width:769px) {
     .agency__right__header img {
@@ -925,5 +946,6 @@ h1 {
         left: auto;
         top: 300px;
         border-radius: 100%;
+        z-index: -1;
     }
 }
