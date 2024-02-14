@@ -10,7 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -182,6 +183,276 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="talent">
+        <div class="talent__circle"></div>
+        <div class="container">
+            <div class="talent__wrap">
+                <div class="talent__header">
+                    <div class="talent__title">
+                        <h1>
+                            Ринг <br>
+                            талантов
+                        </h1>
+                        <img src="images/talent__title.png" alt="">
+                    </div>
+                    <div class="talent__header__item">
+                        <div class="talent__header__item__text">
+                            Масштабный
+                            Всероссийский
+                            проект
+                        </div>
+                        <img src="images/talent__header_item.png" alt="">
+                    </div>
+                    <div class="talent__header__item">
+                        <div class="talent__header__item__text">
+                            От продюсерского центра MD
+                            (Музыкальное/Модельное движение)
+                        </div>
+                        <img src="images/talent__header_item.png" alt="">
+                    </div>
+                </div>
+                <div class="talent__main">
+                    <div class="swiper swiper__main2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="talent__main__item">
+                                    <img src="images/talent1.png" alt="">
+                                </div>
+                            </div>  
+                            <div class="swiper-slide">
+                                <div class="talent__main__item">
+                                    <img src="images/talent2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="talent__main__item">
+                                    <img src="images/talent3.png" alt="">
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                    <script>
+                        const swiperMain2 = new Swiper('.swiper__main2', {
+                            centeredSlides: true,
+                            centeredSlidesBounds: true,
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                            breakpoints: {
+                                    320: {
+                                        slidesPerView: 1,
+                                        centeredSlides: true,
+                                    },
+                                    500: {
+                                        slidesPerView: 1,
+                                        centeredSlides: true,
+                                    },
+                                    768: {
+                                        slidesPerView: 3,
+                                    },
+                                    1024: {
+                                        slidesPerView: 3,
+                                    },
+                                },
+                        });
+                    </script>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="journal">
+        <div class="container">
+            <div class="journal__wrap">
+                <div class="journal__left">
+                    <div class="journal__subtitle">
+                        журнал
+                    </div>
+                    <div class="journal__title">
+                        <h1>
+                            музыкальная
+                            дорожка
+                        </h1>
+                        <img src="images/journal__title.png" alt="">
+                    </div>
+                    <div class="journal__left__main">
+                        <ul>
+                            <li>
+                                <img src="images/agency_ico.svg" alt="">
+                                <div class="journal__left__text">
+                                    Культурно-познавательный глянцевый журнал «Музыкальная дорожка» издаётся <span>с
+                                        2016 года</span>
+                                    (свидетельство о регистрации № ФСС-66153
+                                    от 20 июня 2016).
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/agency_ico.svg" alt="">
+                                <div class="journal__left__text">
+                                    Тираж – <span>15 000 экземпляров</span>.
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/agency_ico.svg" alt="">
+                                <div class="journal__left__text">
+                                    Журнал ориентирован на самый широкий круг читателей и на самые разные возрастные
+                                    группы. Распространяется в культурно-досуговых учреждениях, детских школах искусств,
+                                    детских музыкальных школах и училищах, библиотеках, студиях звукозаписи, на
+                                    различных концертных площадках, музыкальных фестивалях в Москве
+                                    и многих других регионах России.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="journal__right">
+                    div.
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="purpose">
+        <div class="purpose__circle"></div>
+        <div class="container">
+            <div class="purpose__wrap">
+                <div class="purpose__title">
+                    ГЛАВНАЯ
+                    ЦЕЛЬ
+                </div>
+                <div class="purpose__main">
+                    <div class="purpose__text">
+                        — популяризация и поддержка творчества детей и молодежи, помощь
+                        в реализации их профессионального становления. <br> <br>
+
+                        На страницах журнала юные читатели встречаются с известными и популярными людьми, которые
+                        делятся с молодежью своим опытом. В каждом номере журнала много интересного: информация о
+                        состоявшихся концертах и фестивалях, подробный рассказ об их участниках, статьи о самых значимых
+                        музыкальных событиях России. <br> <br>
+
+                        Журнал поддерживает добрые отношения со многими известными артистами, продюсерами,
+                        композиторами, педагогами и публикует эксклюзивную информацию
+                        из первых рук. Здесь можно найти ответы на самые актуальные вопросы, которые стоят перед
+                        молодыми певцами и музыкантами.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="waltz">
+        <div class="waltz__circle__left">
+        </div>
+        <div class="waltz__circle__left2">
+        </div>
+        <div class="waltz__circle__right"></div>
+        <div class="container">
+            <div class="waltz__wrap">
+                <div class="waltz__top">
+                    <div class="waltz__left">
+                        <div class="waltz__top_left__img">
+                            <img src="images/waltz1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="waltz__right">
+                        <div class="waltz__title">
+                            <h1>
+                                вальс
+                                победы
+                            </h1>
+                            <img src="images/walts_title.png" alt="">
+                        </div>
+                        <div class="waltz__top_right__main">
+                            <div class="waltz__right__subtitle">
+                                В 2010 году
+                            </div>
+                            <div class="waltz__right__text">
+                                был основан международный патриотический фестиваль «Вальс Победы» и проводится ежегодно.
+                            </div>
+                            <div class="waltz__right__text">
+                                Фестиваль направлен на сохранение исторической памяти, развитие патриотизма, усиление
+                                важности человеческих взаимоотношений, таких как доброта, любовь, дружба, уважение к
+                                старшим, интерес
+                                к истории и культуре родного края, память
+                                и преклонение перед подвигами дедов и прадедов, защищавших нашу Родину!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="waltz__bottom">
+                    <div class="waltz__left">
+                        <div class="waltz__right__text">
+                            Одна из <span>важных идей</span> фестиваля — поддержка и популяризация патриотических песен
+                            о любви к Родине и об истории своей страны. Авторами этих песен являются новые молодые
+                            авторы, композиторы и исполнители.
+                        </div>
+                    </div>
+                    <div class="waltz__right">
+                        <div class="waltz__bottom_right__img">
+                            <img src="images/waltz2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="festival">
+        <div class="festival__circle"></div>
+        <div class="container">
+            <div class="festival__wrap">
+                <div class="festival__header">
+                    <div class="festival__header__left">
+                        <div class="festival__subtitle">
+                            фестиваль
+                        </div>
+                        <div class="festival__title">
+                            <h1>
+                                музыкальная
+                                дорожка
+                            </h1>
+                            <img src="images/festival_title.png" alt="">
+                        </div>
+                    </div>
+                    <div class="festival__header__right">
+                        <div class="festival__header__text">
+                            Всероссийский конкурс-фестиваль «Музыкальная дорожка» был основан <span>в 2015 году</span> и
+                            проводится
+                            ежегодно среди детей и молодёжи Российской Федерации. <br> <br>
+
+                            К участию в фестивале также приглашаются участники из малообеспеченных и многодетных семей,
+                            детских домов и инвалиды.
+                        </div>
+                    </div>
+                </div>
+                <div class="festival__main">
+                    <div class="swiper swiper__main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="festival__main__item">
+                                    <img src="images/festival1.png" alt="">
+                                </div>
+                            </div>  
+                            <div class="swiper-slide">
+                                <div class="festival__main__item">
+                                    <img src="images/festival2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="festival__main__item">
+                                    <img src="images/festival3.png" alt="">
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                    <script>
+                        const swiperMain = new Swiper('.swiper__main', {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        });
+                    </script>
                 </div>
             </div>
         </div>
