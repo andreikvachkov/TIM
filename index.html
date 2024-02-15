@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Территория исполнения мечты</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,7 +41,7 @@
                         </li>
                     </ul>
                 </div>
-                <button class="header_burder">
+                <button class="header_burder" onclick="toggleNav()">
                     <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M0 0.611112C0 0.273604 0.273605 0 0.611113 0H21.3889C21.7264 0 22 0.273604 22 0.611112C22 0.94862 21.7264 1.22222 21.3889 1.22222H0.611112C0.273604 1.22222 0 0.94862 0 0.611112Z"
@@ -72,7 +78,7 @@
                     <img src="images/Planet3_mobile.svg" alt="">
                 </div>
                 <div class="first-section__button">
-                    <button>
+                    <button onclick="openForm()">
                         Оставить заявку
                     </button>
                 </div>
@@ -81,7 +87,7 @@
         <div class="circle"></div>
         <div class="circle2"></div>
     </section>
-    <section class="muz-track">
+    <section class="muz-track" id="muz-track">
         <div class="muz-track__circle"></div>
         <div class="container">
             <div class="muz-track__wrap">
@@ -136,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="agency">
+    <section class="agency" id="agency">
         <div class="agency__circle"></div>
         <div class="container">
             <div class="agency__wrap">
@@ -187,7 +193,7 @@
             </div>
         </div>
     </section>
-    <section class="talent">
+    <section class="talent" id="talent">
         <div class="talent__circle"></div>
         <div class="container">
             <div class="talent__wrap">
@@ -222,7 +228,7 @@
                                 <div class="talent__main__item">
                                     <img src="images/talent1.png" alt="">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="swiper-slide">
                                 <div class="talent__main__item">
                                     <img src="images/talent2.png" alt="">
@@ -232,8 +238,9 @@
                                 <div class="talent__main__item">
                                     <img src="images/talent3.png" alt="">
                                 </div>
-                            </div>                          
+                            </div>
                         </div>
+                        <div class="swiper-pagination swiper-pagination2"></div>
                     </div>
                     <script>
                         const swiperMain2 = new Swiper('.swiper__main2', {
@@ -242,26 +249,50 @@
                             slidesPerView: 3,
                             spaceBetween: 40,
                             breakpoints: {
-                                    320: {
-                                        slidesPerView: 1,
-                                        centeredSlides: true,
+                                320: {
+                                    slidesPerView: 1.2,
+                                    centeredSlides: true,
+                                    pagination: {
+                                        el: '.swiper-pagination2',
+                                        type: 'bullets',
                                     },
-                                    500: {
-                                        slidesPerView: 1,
-                                        centeredSlides: true,
-                                    },
-                                    768: {
-                                        slidesPerView: 3,
-                                    },
-                                    1024: {
-                                        slidesPerView: 3,
-                                    },
+                                    spaceBetween: 0,
                                 },
+                                500: {
+                                    slidesPerView: 1.2,
+                                    centeredSlides: true,
+                                    pagination: {
+                                        el: '.swiper-pagination2',
+                                        type: 'bullets',
+                                    },
+                                    spaceBetween: 0,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                    pagination: {
+                                        el: '.swiper-pagination2',
+                                        type: 'bullets',
+                                    },
+                                    spaceBetween: 0,
+                                },
+                                900: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 25,
+                                },
+                                1100: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                },
+                                1280: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 40,
+                                },
+                            },
                         });
                     </script>
-                    
-                    
-                    
+
+
+
                 </div>
             </div>
         </div>
@@ -311,12 +342,60 @@
                     </div>
                 </div>
                 <div class="journal__right">
-                    div.
+                    <div class="journal__right__wrap">
+                        <div class="journal__slider">
+                            <div class="journal__slide">
+                                <div class="journal__right__item journal__right__item1">
+                                    <img src="images/journal1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="journal__slide">
+                                <div class="journal__right__item">
+                                    <img src="images/journal1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="journal__slide">
+                                <div class="journal__right__item">
+                                    <img src="images/journal1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            $('.journal__slider').slick({
+                                centerMode: true,
+                                centerPadding: '0px',
+                                slidesToShow: ,
+                                infinite: false,
+                                variableWidth: true,
+                                responsive: [
+                                    {
+                                        breakpoint: 768,
+                                        settings: {
+                                            arrows: false,
+                                            centerMode: true,
+                                            centerPadding: '40px',
+                                            slidesToShow: 1
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 480,
+                                        settings: {
+                                            arrows: false,
+                                            centerMode: true,
+                                            centerPadding: '40px',
+                                            slidesToShow: 1
+                                        }
+                                    }
+                                ]
+                            });
+                        </script>
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </section> -->
-    <section class="purpose">
+    <section class="purpose" id="purpose">
         <div class="purpose__circle"></div>
         <div class="container">
             <div class="purpose__wrap">
@@ -343,7 +422,7 @@
             </div>
         </div>
     </section>
-    <section class="waltz">
+    <section class="waltz" id="waltz">
         <div class="waltz__circle__left">
         </div>
         <div class="waltz__circle__left2">
@@ -399,7 +478,7 @@
             </div>
         </div>
     </section>
-    <section class="festival">
+    <section class="festival" id="festival">
         <div class="festival__circle"></div>
         <div class="container">
             <div class="festival__wrap">
@@ -434,7 +513,7 @@
                                 <div class="festival__main__item">
                                     <img src="images/festival1.png" alt="">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="swiper-slide">
                                 <div class="festival__main__item">
                                     <img src="images/festival2.png" alt="">
@@ -444,19 +523,312 @@
                                 <div class="festival__main__item">
                                     <img src="images/festival3.png" alt="">
                                 </div>
-                            </div>                          
+                            </div>
                         </div>
+                        <div class="swiper-pagination swiper-pagination1"></div>
                     </div>
                     <script>
                         const swiperMain = new Swiper('.swiper__main', {
+                            centeredSlides: true,
+                            centeredSlidesBounds: true,
                             slidesPerView: 3,
                             spaceBetween: 40,
+                            breakpoints: {
+                                320: {
+                                    slidesPerView: 1.2,
+                                    centeredSlides: true,
+                                    pagination: {
+                                        el: '.swiper-pagination1',
+                                        type: 'bullets',
+                                    },
+                                    spaceBetween: 0,
+                                },
+                                500: {
+                                    slidesPerView: 1.2,
+                                    centeredSlides: true,
+                                    pagination: {
+                                        el: '.swiper-pagination1',
+                                        type: 'bullets',
+                                    },
+                                    spaceBetween: 0,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                    pagination: {
+                                        el: '.swiper-pagination1',
+                                        type: 'bullets',
+                                    },
+                                    spaceBetween: 20,
+                                },
+                                900: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 25,
+                                },
+                                1100: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                },
+                                1280: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 40,
+                                },
+                            },
                         });
                     </script>
                 </div>
             </div>
         </div>
     </section>
+    <section class="musichit" id="musichit">
+        <div class="musichit__circle__left"></div>
+        <div class="musichit__circle__right"></div>
+        <div class="container">
+            <div class="musichit__wrap">
+                <div class="musichit__mobile__header">
+                    <div class="musichit__mobile__title">
+                        ТВОЙ
+                    </div>
+                    <div class="musichit__mobile__subtitle">
+                        МУЗЫКАЛЬНЫЙ ХИТ
+                    </div>
+                    <img src="images/hit_mobile.png" alt="">
+                    <div class="musichit__mobile__text">
+                        Написание авторских песен на заказ
+                        для начинающих и опытных артистов!
+                    </div>
+                </div>
+                <div class="musichit__left">
+                    <div class="musichit__img">
+                        <img src="images/musichit.png" alt="">
+                    </div>
+                </div>
+                <div class="musichit__right">
+                    <div class="musichit__header">
+                        <div class="musichit__title">
+                            ТВОЙ
+                        </div>
+                        <div class="musichit__subtitle">
+                            МУЗЫКАЛЬНЫЙ ХИТ
+                        </div>
+                        <div class="musichit__header__text">
+                            Написание авторских песен на заказ
+                            для начинающих и опытных артистов!
+                        </div>
+                        <img src="images/musichit_title.png" alt="">
+                    </div>
+                    <div class="musichit__right__main">
+                        <div class="musichit__text_bold">
+                            Вы артист или планируете им стать,
+                            но у Вас нет оригинальных авторских песен?
+                        </div>
+                        <div class="musichit__text">
+                            Мы напишем для Вас песню в разных музыкальных жанрах и направлениях с разными тематическими
+                            смыслами.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news" id="news">
+        <div class="news__circle"></div>
+        <img class="news__lines" src="images/news_lines.svg" alt="">
+        <div class="container">
+            <div class="news__wrap">
+                <div class="news__title">
+                    НОВОСТИ
+                </div>
+                <div class="news__main">
+                    <div class="news__main__wrap">
+                        <div class="swiper swiper__main3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="news__item">
+                                        <div class="news__item__img">
+                                            <img src="images/news.png" alt="">
+                                        </div>
+                                        <div class="news__item__name">
+                                            Концерт Ведущего творческого коллектива Москвы
+                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
+                                        </div>
+                                        <div class="news__item__date">
+                                            14.11.2023
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__item">
+                                        <div class="news__item__img">
+                                            <img src="images/news.png" alt="">
+                                        </div>
+                                        <div class="news__item__name">
+                                            Концерт Ведущего творческого коллектива Москвы
+                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
+                                        </div>
+                                        <div class="news__item__date">
+                                            14.11.2023
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__item">
+                                        <div class="news__item__img">
+                                            <img src="images/news.png" alt="">
+                                        </div>
+                                        <div class="news__item__name">
+                                            Концерт Ведущего творческого коллектива Москвы
+                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
+                                        </div>
+                                        <div class="news__item__date">
+                                            14.11.2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__swiper_btn__wrap">
+                            <div class="swiper-button-prev2 btn_left">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16.6" cy="16.6" r="16.6" fill="#3063FF" />
+                                    <path d="M19.9385 9L10.9999 16.2626L19.9385 23.5253" stroke="black"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next2 btn_right">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16.6" cy="16.6" r="16.6" transform="matrix(-1 0 0 1 33.2 0)"
+                                        fill="#3063FF" />
+                                    <path d="M13.2 9L22.1386 16.2626L13.2 23.5253" stroke="black" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <script>
+                            const swiperMain3 = new Swiper('.swiper__main3', {
+                                slidesPerView: 1,
+                                spaceBetween: 5,
+                                navigation: {
+                                    nextEl: '.swiper-button-next2',
+                                    prevEl: '.swiper-button-prev2',
+                                },
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__container">
+            <div class="mobile-menu__wrap">
+                <div class="mobile-menu__close__wrap">
+                    <button class="cancel" onclick="toggleNav()">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mobile__nav-menu">
+                    <ul>
+                        <li>
+                            <a href="#muz-track" onclick="toggleNav()">Музыкальная дорожка</a>
+                        </li>
+                        <li>
+                            <a href="#agency" onclick="toggleNav()">Модельное агентство</a>
+                        </li>
+                        <li>
+                            <a href="#talent" onclick="toggleNav()">Ринг талантов</a>
+                        </li>
+                        <li>
+                            <a href="" onclick="toggleNav()">Журнал Музыкальная дорожка</a>
+                        </li>
+                        <li>
+                            <a href="#waltz" onclick="toggleNav()">Вальс победы</a>
+                        </li>
+                        <li>
+                            <a href="#festival" onclick="toggleNav()">Фестиваль Музыкальная дорожка</a>
+                        </li>
+                        <li>
+                            <a href="#musichit" onclick="toggleNav()">Твой музыкальный хит</a>
+                        </li>
+                        <li>
+                            <a href="#news" onclick="toggleNav()">Новости</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile__nav-socies">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="socies__link__content">
+                                    <img src="images/tg.svg" alt="">
+                                    <div class="mobile__nav-socies__text">
+                                        Telegram
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="socies__link__content">
+                                    <img src="images/whatsapp.png" alt="">
+                                    <div class="mobile__nav-socies__text">
+                                        Telegram
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="mobile__nav-socies__text">
+                                    +7 912 (345) 67-89
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-inputs" id="popup-inputs">
+        <div class="popup__main">
+            <div class="popup__container">
+                <button type="button" class="cancel" onclick="closeForm()">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"
+                            fill="black" fill-opacity="0.4" />
+                    </svg>
+                </button>
+                <div class="popup__content">
+                    <div class="popup__title">
+                        Оставьте заявку
+                    </div>
+                    <div class="popup__text">
+                        В ближайшее время мы с вами свяжемся
+                    </div>
+                    <form action="">
+                        <div class="popup__form__item">
+                            <label for="name"><b>Имя</b></label>
+                            <input type="text" placeholder="Введите Ваше имя" name="name" required>
+                        </div>
+                        <div class="popup__form__item">
+                            <label for="phone"><b>Телефон</b></label>
+                            <input type="text" placeholder="Введите Ваш номер телефона" name="phone" required>
+                        </div>
+                        <button type="submit" class="btn">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
