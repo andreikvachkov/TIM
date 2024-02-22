@@ -73,10 +73,109 @@
                     <img class="first_mobile3" src="images/first_mobile3.png" alt="">
                 </div>
                 <div class="planet__mobile">
-                    <img src="images/Planet1_mobile.png" alt="">
-                    <img src="images/Planet8_mobile.png" alt="">
-                    <img src="images/Planet3_mobile.png" alt="">
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#news">
+                                <img src="images/Planet1.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#musichit">
+                                <img src="images/Planet2.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#agency">
+                                <img src="images/Planet3.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#talent">
+                                <img src="images/Planet4.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#journal">
+                                <img src="images/Planet5.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#waltz">
+                                <img src="images/Planet6.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#festival">
+                                <img src="images/Planet7.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="planet__mobile__slide">
+                        <div class="planet__mobile__item">
+                            <a href="#muz-track">
+                                <img src="images/Planet8.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    
                 </div>
+                        
+                <script>
+                    $('.planet__mobile').slick({
+                        centerMode: true,
+                        centerPadding: '0px',
+                        slidesToShow: 3,
+                        initialSlide: 1,
+                        infinite: false,
+                        variableWidth: true,
+                        arrows : false,
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    centerMode: true,
+                                    centerPadding: '40px',
+                                    slidesToShow: 3,
+                                    initialSlide: 1,
+                                    infinite: false,
+                                    variableWidth: true,
+                                    arrows : false,
+                                }
+                            },
+                            {
+                                breakpoint: 320,
+                                settings: {
+                                    centerMode: true,
+                                    centerPadding: '20px',
+                                    slidesToShow: 3,
+                                    initialSlide: 1,
+                                    infinite: false,
+                                    variableWidth: true,
+                                    arrows : false,
+                                }
+                            }
+                        ]
+                    });
+                </script>
                 <div class="first-section__button">
                     <button onclick="openForm()">
                         Оставить заявку
@@ -86,6 +185,96 @@
         </div>
         <div class="circle"></div>
         <div class="circle2"></div>
+    </section>
+    <section class="news" id="news">
+        <div class="news__circle"></div>
+        <img class="news__lines" src="images/news_lines.svg" alt="">
+        <div class="container">
+            <div class="news__wrap">
+                <div class="news__title">
+                    НОВОСТИ
+                </div>
+                <div class="news__main">
+                    <div class="news__main__wrap">
+                        <div class="swiper swiper__main3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="news__item">
+                                        <div class="news__item__img">
+                                            <img src="images/news.png" alt="">
+                                        </div>
+                                        <div class="news__item__name">
+                                            Концерт Ведущего творческого коллектива Москвы
+                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
+                                        </div>
+                                        <div class="news__item__date">
+                                            14.11.2023
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__item">
+                                        <div class="news__item__img">
+                                            <img src="images/news.png" alt="">
+                                        </div>
+                                        <div class="news__item__name">
+                                            Концерт Ведущего творческого коллектива Москвы
+                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
+                                        </div>
+                                        <div class="news__item__date">
+                                            14.11.2023
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__item">
+                                        <div class="news__item__img">
+                                            <img src="images/news.png" alt="">
+                                        </div>
+                                        <div class="news__item__name">
+                                            Концерт Ведущего творческого коллектива Москвы
+                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
+                                        </div>
+                                        <div class="news__item__date">
+                                            14.11.2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__swiper_btn__wrap">
+                            <div class="swiper-button-prev2 btn_left">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16.6" cy="16.6" r="16.6" fill="#3063FF" />
+                                    <path d="M19.9385 9L10.9999 16.2626L19.9385 23.5253" stroke="black"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next2 btn_right">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16.6" cy="16.6" r="16.6" transform="matrix(-1 0 0 1 33.2 0)"
+                                        fill="#3063FF" />
+                                    <path d="M13.2 9L22.1386 16.2626L13.2 23.5253" stroke="black" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <script>
+                            const swiperMain3 = new Swiper('.swiper__main3', {
+                                slidesPerView: 1,
+                                spaceBetween: 5,
+                                navigation: {
+                                    nextEl: '.swiper-button-next2',
+                                    prevEl: '.swiper-button-prev2',
+                                },
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="muz-track" id="muz-track">
         <div class="muz-track__circle"></div>
@@ -357,7 +546,7 @@
                             </div>
                             <div class="journal__slide">
                                 <div class="journal__right__item">
-                                    <img src="images/journal1.png" alt="">
+                                    <img src="images/блок журнал муз.дорожка.jpg" alt="">
                                 </div>
                             </div>
 
@@ -482,7 +671,7 @@
                     </div>
                     <div class="waltz__right">
                         <div class="waltz__bottom_right__img">
-                            <img src="images/waltz2.png" alt="">
+                            <img src="images/Блок вальс победы.jpeg" alt="">
                         </div>
                     </div>
                 </div>
@@ -641,96 +830,7 @@
             </div>
         </div>
     </section>
-    <section class="news" id="news">
-        <div class="news__circle"></div>
-        <img class="news__lines" src="images/news_lines.svg" alt="">
-        <div class="container">
-            <div class="news__wrap">
-                <div class="news__title">
-                    НОВОСТИ
-                </div>
-                <div class="news__main">
-                    <div class="news__main__wrap">
-                        <div class="swiper swiper__main3">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="news__item">
-                                        <div class="news__item__img">
-                                            <img src="images/news.png" alt="">
-                                        </div>
-                                        <div class="news__item__name">
-                                            Концерт Ведущего творческого коллектива Москвы
-                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
-                                        </div>
-                                        <div class="news__item__date">
-                                            14.11.2023
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__item">
-                                        <div class="news__item__img">
-                                            <img src="images/news.png" alt="">
-                                        </div>
-                                        <div class="news__item__name">
-                                            Концерт Ведущего творческого коллектива Москвы
-                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
-                                        </div>
-                                        <div class="news__item__date">
-                                            14.11.2023
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__item">
-                                        <div class="news__item__img">
-                                            <img src="images/news.png" alt="">
-                                        </div>
-                                        <div class="news__item__name">
-                                            Концерт Ведущего творческого коллектива Москвы
-                                            МУЗЫКАЛЬНАЯ ДОРОЖКА
-                                        </div>
-                                        <div class="news__item__date">
-                                            14.11.2023
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news__swiper_btn__wrap">
-                            <div class="swiper-button-prev2 btn_left">
-                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="16.6" cy="16.6" r="16.6" fill="#3063FF" />
-                                    <path d="M19.9385 9L10.9999 16.2626L19.9385 23.5253" stroke="black"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <div class="swiper-button-next2 btn_right">
-                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="16.6" cy="16.6" r="16.6" transform="matrix(-1 0 0 1 33.2 0)"
-                                        fill="#3063FF" />
-                                    <path d="M13.2 9L22.1386 16.2626L13.2 23.5253" stroke="black" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </div>
-                        <script>
-                            const swiperMain3 = new Swiper('.swiper__main3', {
-                                slidesPerView: 1,
-                                spaceBetween: 5,
-                                navigation: {
-                                    nextEl: '.swiper-button-next2',
-                                    prevEl: '.swiper-button-prev2',
-                                },
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu__container">
             <div class="mobile-menu__wrap">
