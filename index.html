@@ -145,7 +145,7 @@
                         centerPadding: '0px',
                         slidesToShow: 3,
                         initialSlide: 1,
-                        infinite: false,
+                        infinite: true,
                         variableWidth: true,
                         arrows : false,
                         responsive: [
@@ -156,7 +156,7 @@
                                     centerPadding: '40px',
                                     slidesToShow: 3,
                                     initialSlide: 1,
-                                    infinite: false,
+                                    infinite: true,
                                     variableWidth: true,
                                     arrows : false,
                                 }
@@ -168,7 +168,7 @@
                                     centerPadding: '20px',
                                     slidesToShow: 3,
                                     initialSlide: 1,
-                                    infinite: false,
+                                    infinite: true,
                                     variableWidth: true,
                                     arrows : false,
                                 }
@@ -265,6 +265,7 @@
                             const swiperMain3 = new Swiper('.swiper__main3', {
                                 slidesPerView: 1,
                                 spaceBetween: 5,
+                                loop: true,
                                 navigation: {
                                     nextEl: '.swiper-button-next2',
                                     prevEl: '.swiper-button-prev2',
@@ -437,10 +438,12 @@
                             centeredSlidesBounds: true,
                             slidesPerView: 3,
                             spaceBetween: 40,
+                            
                             breakpoints: {
                                 320: {
                                     slidesPerView: 1.2,
                                     centeredSlides: true,
+                                    loop: true,
                                     pagination: {
                                         el: '.swiper-pagination2',
                                         type: 'bullets',
@@ -450,6 +453,7 @@
                                 500: {
                                     slidesPerView: 1.2,
                                     centeredSlides: true,
+                                    loop: true,
                                     pagination: {
                                         el: '.swiper-pagination2',
                                         type: 'bullets',
@@ -559,21 +563,21 @@
                         $('.journal__slider').slick({
                             centerMode: true,
                             centerPadding: '0px',
-                            slidesToShow: 1.2,
-                            infinite: false,
+                            slidesToShow: 1,
+                            infinite: true,
                             variableWidth: true,
                             prevArrow: '<div class="journal__slider__prev"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16.6" cy="16.6" r="16.6" fill="#E4367F"/><path d="M19.9385 9L10.9999 16.2626L19.9385 23.5253" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
                             nextArrow: '<div class="journal__slider__next"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16.6" cy="16.6" r="16.6" transform="matrix(-1 0 0 1 33.9998 0)" fill="#E4367F"/><path d="M13.9998 9L22.9384 16.2626L13.9998 23.5253" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
                             appendArrows: '.journal__slider_btn__wrap',
                             responsive: [
                                 {
-                                    breakpoint: 768,
+                                    breakpoint: 769,
                                     settings: {
                                         centerMode: true,
                                         centerPadding: '60px',
                                         slidesToShow: 1,
                                         initialSlide: 1,
-                                        infinite: false,
+                                        infinite: true,
                                         variableWidth: false,
                                     }
                                 },
@@ -584,7 +588,7 @@
                                         centerPadding: '60px',
                                         slidesToShow: 1,
                                         initialSlide: 1,
-                                        infinite: false,
+                                        infinite: true,
                                         variableWidth: false,
                                     }
                                 }
@@ -733,10 +737,12 @@
                             centeredSlidesBounds: true,
                             slidesPerView: 3,
                             spaceBetween: 40,
+                            
                             breakpoints: {
                                 320: {
                                     slidesPerView: 1.2,
                                     centeredSlides: true,
+                                    loop: true,
                                     pagination: {
                                         el: '.swiper-pagination1',
                                         type: 'bullets',
@@ -746,6 +752,7 @@
                                 500: {
                                     slidesPerView: 1.2,
                                     centeredSlides: true,
+                                    loop: true,
                                     pagination: {
                                         el: '.swiper-pagination1',
                                         type: 'bullets',
