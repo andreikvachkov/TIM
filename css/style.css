@@ -185,10 +185,14 @@ h1 {
     height: 100vh;
     position: relative;
 }
-.first_right {
+.first__right__img__wrap {
     position: absolute;
     top: 0;
     right: 0;
+}
+.first_right {
+    position: relative;
+
     max-width: 100%;
 }
 .first_left {
@@ -285,8 +289,51 @@ h1 {
 .planet__mobile__item img {
     width: 100%;
 }
+.desctop__planet {
+    display: block;
+    position: absolute;
+    width: 21.9%;
+    height: auto;
+}
+.desctop__planet img {
+    width: 100%;
+    height: auto;
+}
+.desctop__planet1 {
+    right: 45%;
+    top: 50%;
+}
+.desctop__planet2 {
+    right: 15%;
+    top: 56%;
+}
+.desctop__planet3 {
+    right: 18%;
+    top: 85%;
+}
+.desctop__planet4 {
+    right: 48%;
+    top: 80%;
+}
+.desctop__planet5 {
+    right: 77%;
+    top: 62%;
+}
+.desctop__planet6 {
+    right: 66%;
+    top: 33%;
+}
+.desctop__planet7 {
+    right: 44%;
+    top: 14%;
+}
+.desctop__planet8 {
+    right: 20%;
+    top: 30%;
+}
+
 @media (max-width: 1440px) and (min-width: 769px) {
-    .first_right {
+    .first__right__img__wrap {
         max-width: auto;
         width: 62%;
     }
@@ -363,7 +410,7 @@ h1 {
     .first_mobile3 {
         display: block;
     }
-    .first_right {
+    .first__right__img__wrap {
         display: none;
     }
     .first-section__title {
